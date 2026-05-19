@@ -1,0 +1,261 @@
+reset * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* HEADER */
+header {
+  position: fixed;
+  background-color: #f0232f;
+  width: 100%;
+  height: 6rem;
+  z-index: 100;
+  padding: 1rem 0;
+}
+header h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 3rem;
+  font-style: italic;
+}
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.7rem;
+  transition: color 0.2s;
+  border-left: solid #d3232f;
+  padding: 1rem;
+}
+
+.menu a:hover {
+  color: #aaaaaa;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container {
+  max-width: 1200px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1.3rem;
+}
+/* HERO SECTION */
+.hero-section {
+  background:
+    linear-gradient(rgba(44, 24, 16, 0.7), rgba(44, 25, 16, 0.6)),
+    url(imgs/heropizza.jpg);
+  background-size: cover;
+  background-position: right;
+  height: 31.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-content h2 {
+  margin-top: 5rem;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.menus {
+  height: 100%;
+  width: 100%;
+  background-color: #d3232f;
+}
+.titulo-secao {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: white;
+  padding-top: 2rem;
+  font-weight: bold;
+  font-style: italic;
+}
+.cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 280px;
+  max-width: 350px;
+  flex: 1;
+  transition: transform 0.5s;
+}
+.mussa {
+  padding-top: 1.6rem;
+}
+.card:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.card-content h3 {
+  font-size: 1.5rem;
+  color: #2c1810;
+}
+
+.card-content p {
+  color: #666667;
+}
+.card span {
+  font-weight: bold;
+  font-size: 2rem;
+}
+/* SOBRE */
+.sobre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background-color: #d3232f;
+  padding: 60px;
+}
+.sobre-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  width: 75%;
+  border-radius: 10px;
+}
+.sobre-img img {
+  padding-left: 2rem;
+  width: 10rem;
+  border-radius: 10px;
+}
+
+.sobre-texto {
+  padding: 1.5rem;
+  max-width: 80%;
+}
+
+.sobre-texto p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+/* CONTATOS */
+.contato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background:
+    linear-gradient(rgba(44, 24, 16, 0.7), rgba(44, 25, 16, 0.6)),
+    url(imgs/heropizza.jpg);
+  background-size: cover;
+  background-position: left;
+}
+.contato-content {
+  margin: 2rem;
+  background-color: white;
+  width: 40%;
+  border-radius: 2rem;
+  border: 0.3rem solid #f0232f;
+}
+.contato h2 {
+  font-weight: bold;
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+.info-contato {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 0.3rem solid #d3232f;
+}
+
+.formulario {
+  max-width: 34.375rem;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding-bottom: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sobre {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-img img {
+    width: 100%;
+    max-width: 25rem;
+  }
+
+  .info-contato {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+}
+/* FOOTER */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d3232f;
+  color: white;
+  padding: 3rem 0 1rem;
+}
+.footer-bottom p {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
